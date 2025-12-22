@@ -1,6 +1,4 @@
-def total_words_in_text(text):
-    words = text.split()
-    return len(words)
+from stats import total_words_in_text
 
 def get_book_text(path_to_file):
     with open(path_to_file, encoding='utf-8') as f:
