@@ -1,6 +1,7 @@
 from stats import total_words_in_text
 from stats import count_letters
 from stats import sort_letter_counts
+import sys 
 
 def get_book_text(path_to_file):
     with open(path_to_file, encoding='utf-8') as f:
@@ -9,7 +10,7 @@ def get_book_text(path_to_file):
 
 
 def main():
-    path_to_file = "books/frankenstein.txt"
+    path_to_file = sys.argv[1]
     text = get_book_text(path_to_file)
     total_words = total_words_in_text(text)
     letter_counts = count_letters(text)
